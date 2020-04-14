@@ -10,18 +10,15 @@ class PortfolioPage extends StatelessWidget {
         title: "Portfolio".text.make(),
       ),
       body: VStack([
-        Image.network(
-          "https://avatars2.githubusercontent.com/u/12619420?s=460&u=8f41c788adbe5c6c33b3922c55c0c3b50f8fc931&v=4",
-          height: context.percentHeight * 40,
-          width: context.percentWidth * 50,
-          fit: BoxFit.cover,
-        ).centered(),
-        "Hi, I am Pawan".text.xl4.blue500.semiBold.make(),
-        "GoogleDevExpert for Flutter, Firebase, Dart & Web Tech. Public Speaker, Blogger, Entrepreneur & YouTuber. Founder of MTechViral & Let's Flutter with Dart."
-            .text
-            .gray600
-            .xl
-            .make(),
+        VxDevice(
+          mobile: Image.network(
+            "https://bitly.com/pawan",
+            height: context.percentHeight * 40,
+            width: context.percentWidth * 50,
+            fit: BoxFit.cover,
+          ).centered(),
+          web: "Hi, I am Pawan".text.xl4.blue500.semiBold.make(),
+        )
       ]).p16(),
     );
   }

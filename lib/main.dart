@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:velocityx_examples/flutter-week.dart';
 import 'package:velocityx_examples/portfolio.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: PortfolioPage(),
+      home: FlutterWeek(),
     );
   }
 }
