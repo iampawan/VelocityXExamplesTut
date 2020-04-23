@@ -150,7 +150,7 @@ class VxFlow extends StatelessWidget {
         Expanded(
           child: [
             VStack([
-              "New".text.white.make().box.p8.roundedSM.teal500.make(),
+              "New".text.white.make().box.p8.roundedLg.red500.make(),
               2.heightBox,
               [
                 "3 Beds".text.gray700.sm.make(),
