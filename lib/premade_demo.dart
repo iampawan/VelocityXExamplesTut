@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-class FlutterWeek extends StatelessWidget {
+class DemoPremade extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +20,7 @@ class NormalFlow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.6,
+        height: MediaQuery.of(context).size.height * 0.7,
         width: MediaQuery.of(context).size.width * 0.8,
         child: Card(
           shape: RoundedRectangleBorder(
@@ -63,7 +63,9 @@ class NormalFlow extends StatelessWidget {
                                 children: [
                                   Text(
                                     "3 Beds",
-                                    style: TextStyle(fontSize: 12, color: Colors.grey.shade600),
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        color: Colors.grey.shade600),
                                   ),
                                   SizedBox(
                                     width: 5,
@@ -71,12 +73,17 @@ class NormalFlow extends StatelessWidget {
                                   Container(
                                     height: 5,
                                     width: 5,
-                                    decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.grey),
+                                    decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.grey),
                                   ),
                                   SizedBox(
                                     width: 5,
                                   ),
-                                  Text("2 Baths", style: TextStyle(fontSize: 12, color: Colors.grey.shade600)),
+                                  Text("2 Baths",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.grey.shade600)),
                                 ],
                               ),
                               SizedBox(
@@ -121,7 +128,10 @@ class NormalFlow extends StatelessWidget {
                             child: Center(
                               child: Text(
                                 "A+",
-                                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20),
                               ),
                             ),
                             decoration: BoxDecoration(
@@ -146,7 +156,8 @@ class VxFlow extends StatelessWidget {
   Widget build(BuildContext context) {
     return VxBox(
       child: VStack([
-        Image.asset("assets/modern_home.jpg", fit: BoxFit.cover, height: 400, width: double.infinity),
+        Image.asset("assets/modern_home.jpg",
+            fit: BoxFit.cover, height: 400, width: double.infinity),
         Expanded(
           child: [
             VStack([
@@ -160,14 +171,35 @@ class VxFlow extends StatelessWidget {
               5.heightBox,
               "Modern Home in City Center".text.bold.make(),
               5.heightBox,
-              "\$1900".richText.red500.sm.withTextSpanChildren([" / wk".textSpan.gray500.make()]).make(),
+              "\$1900".richText.red500.sm.withTextSpanChildren(
+                  [" / wk".textSpan.gray500.make()]).make(),
               5.heightBox,
               "34 reviews".text.textStyle(context.textTheme.caption).make()
             ]),
-            "A+".text.xl2.white.bold.make().box.alignCenter.roundedFull.square(80).linearGradient([Vx.green300, Vx.green600]).make()
-          ].hStack(alignment: MainAxisAlignment.spaceBetween, axisSize: MainAxisSize.max, crossAlignment: CrossAxisAlignment.center).p16(),
+            "A+"
+                .text
+                .xl2
+                .white
+                .bold
+                .make()
+                .box
+                .alignCenter
+                .roundedFull
+                .square(80)
+                .linearGradient([Vx.green300, Vx.green600]).make()
+          ]
+              .hStack(
+                  alignment: MainAxisAlignment.spaceBetween,
+                  axisSize: MainAxisSize.max,
+                  crossAlignment: CrossAxisAlignment.center)
+              .p16(),
         )
       ]),
-    ).size(context.percentWidth * 80, context.percentHeight * 60).make().card.rounded.makeCentered();
+    )
+        .size(context.percentWidth * 80, context.percentHeight * 70)
+        .make()
+        .card
+        .rounded
+        .makeCentered();
   }
 }
